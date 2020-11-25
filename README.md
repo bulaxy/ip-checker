@@ -143,4 +143,6 @@ node ip-checker
 ```
 
 ### Roadmap
-(TODO)
+- Add Facebook Messager as another form of notification
+- Multiple Discord User
+- Mail html templates

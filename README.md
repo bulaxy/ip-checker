@@ -9,7 +9,7 @@ This is a simple ip checker program which emails and send a discord message when
 
 - Already have Discord Bot
 - email account or mail server
-- (optional)PM2 installed [PM2 Documentation](https://pm2.keymetrics.io/docs/usage/quick-start/)
+- (recommended) PM2 installed [PM2 Documentation](https://pm2.keymetrics.io/docs/usage/quick-start/)
 
 ### Installation
 
@@ -25,7 +25,7 @@ git clone https://github.com/bulaxy/ip-checker
 npm install
 ```
 
-3. Adding config files
+3. Adding 3 config files inside config folder
 
 #### `general.json`
 
@@ -114,3 +114,6 @@ Running outside the directory
 ```
 node ip-checker
 ```
+
+### Roadmap
+(TODO)

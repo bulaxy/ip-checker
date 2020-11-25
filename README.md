@@ -68,7 +68,7 @@ example
 example
 ```
 {
-    "host": "mail.bulaxy.site",
+    "host": "mail.xxxxxx",
     "port": 25,
     "secure": false, 
     "auth": {

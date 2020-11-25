@@ -1,13 +1,24 @@
 const nodemailer = require("nodemailer");
 const MAILCONFIG = require('../config/mail.json');
-async function main(subject,text) {
+
+function main(recipiant,subject,text) {
+    // Create nodemailer transportor
     let transportor = nodemailer.createTransport(MAILCONFIG);
-    let info = await transportor.sendMail({
-        from: `"noreply" <${MAILCONFIG.email}>`,
+
+    // Set up the display Name Desired
+    if(MAILCONFIG.displayname){
+        var senderDisplay = `${MAILCONFIG.displayname}<${(MAILCONFIG.email)?MAILCONFIG.email:MAILCONFIG.auth.user}></$>`
+    }else{
+        var senderDisplay = (MAILCONFIG.email)?MAILCONFIG.email:MAILCONFIG.auth.user
+    }
+    
+    // Filling the info
+    transportor.sendMail({
+        from: senderDisplay,
         to: recipiant,
         subject: subject, // Subject line
         text: text, // html body
-    }, function (error, info) {
+    }, function (error) {
         if (error) {
             return error;
         } else {
@@ -15,6 +26,7 @@ async function main(subject,text) {
         }
     });
 }
+
 function init(){
 
 }

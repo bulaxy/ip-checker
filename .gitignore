@@ -2,3 +2,5 @@ node_modules/
 config/mail.json
 config/discordBot.json
 config/general.json
+localip
+.vscode/launch.json

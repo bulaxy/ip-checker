@@ -10,7 +10,11 @@ function init() {
             console.log('File exists');
         } else if (err.code === 'ENOENT') {
             // file does not exist
-            fs.writeFile('ip', '');
+            fs.writeFile(CONFIG.filename, '', function (error) {
+                if (error) {
+                    console.log(err)
+                }
+            });
         } else {
             console.log('Some other error: ', err.code);
         }

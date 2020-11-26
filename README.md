@@ -143,6 +143,6 @@ node ip-checker
 ```
 
 ### Roadmap
-- Add Facebook Messager as another form of notification
+- ~~Add Facebook Messager as another form of notification~~ (FB's webhook seems to require it's ip address to function, which is defeat the purpose of this app, leave an issues or message me if I am wrong :) )
 - Multiple Discord User
 - Mail html templates
